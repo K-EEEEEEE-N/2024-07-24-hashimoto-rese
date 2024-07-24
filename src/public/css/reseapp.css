@@ -1,0 +1,16 @@
+
+
+body {
+    background-color: #EAEAEA;
+}
+
+.header__inner {
+    display: flex;
+}
+
+.header__title--p {
+
+    font-size: 30px;
+    color: #243FFF;
+    font-weight: bold;
+}

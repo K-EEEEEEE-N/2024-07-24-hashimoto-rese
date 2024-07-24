@@ -1,13 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-
 .nav {
     background-color: #243FFF;
     border-radius: 9px;
-    margin: 10px 20px 10px 20px;
+    margin: 20px 20px 10px 100px;
 }
 
 /* チェックボックスを非表示にする */
@@ -99,83 +93,127 @@
     /* メニューを画面に入れる */
 }
 
-.header {
-    display: flex;
-    background-color: #EAEAEA;
-}
-
-.header__title {
-    padding-top: 15px;
-}
-
-.header__title--p {
-    padding-top: 5px;
-    font-size: 30px;
+.nav_item a {
+    text-decoration: none;
     color: #243FFF;
-    font-weight: bold;
 }
 
-.register__body {
+.nav_item button {
+    border: none;
     background-color: #EAEAEA;
-    height: 100%;
+    color: #243FFF;
+    font-size: 30px;
+    cursor: pointer;
 }
 
-.register__content {
+.shop-detail__left__name {
+    display: flex;
+    padding-left: 100px;
+    padding-top: 40px;
+}
+
+.shop-detail {
+    display: flex;
+}
+
+.shop-detail__left__name__a {
+    font-size: 20px;
+    text-decoration: none;
     background-color: white;
-    border-bottom-left-radius: 9px;
-    border-bottom-right-radius: 9px;
-    padding: 40px;
-    margin: 0px 400px 400px 400px;
-    width: 500px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 3px black;
+    padding: 10px;
 }
 
-.x-auth-card {
-    border-radius: 0px;
+.shop-detail__left__name__h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 30px;
 }
 
-.register__form {
+.shop-detail__left img {
+    width: 30rem;
+    height: 20rem;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.shop-detail__left__p {
+    display: flex;
+}
+
+.shop-detail__left__p__area {
+    margin-left: 100px;
+}
+
+.shop-detail__left__p__genre {
+    padding-left: 5px;
+}
+
+.shop-detail__left__description {
+    margin-left: 100px;
+    width: 30rem;
+}
+
+.shop-detail__right {
     position: relative;
-    padding-top: 0px;
-    border-radius: 10px;
+    top: -80px;
+    right: -100px;
+    width: 30rem;
+    height: 42rem;
+    background-color: #243FFF;
+    border-radius: 6px;
+    box-shadow: 3px 3px 3px black;
+    padding-left: 20px;
 }
 
-.register__title {
-    width: 500px;
-    padding: 100px 400px 0px 400px;
-    background-color: #EAEAEA;
+.shop-detail__right h2 {
+    font-size: 30px;
+    color: white;
 }
 
-.register__title--p {
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group input {
+    width: 10rem;
+    cursor: pointer;
+}
+
+.form-group select {
+    width: 25rem;
+    cursor: pointer;
+}
+
+.reservation-summary {
+    width: 24rem;
+    background-color: #3D64FF;
+    border-radius: 6px;
+    padding-left: 15px;
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-left: 10px;
+}
+
+.reservation-summary p {
     color: white;
-    font-weight: bold;
-    width: 500px;
-    background-color: #243FFF;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
 }
 
-.mt-4 {
-    display: flex;
-}
-
-.login__title {
-    width: 450px;
-    margin: 0 auto;
-}
-
-.login__title--p {
+.reservation-summary span {
     position: absolute;
-    top: 300px;
-    width: 450px;
-    padding-left: 10px;
-    padding-bottom: 20px;
-    padding-top: 10px;
-    background-color: #243FFF;
+    left: 10rem;
+}
+
+.shop-detail__right button {
+    background-color: #0011FE;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
     color: white;
-    font-weight: bold;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
+    cursor: pointer;
 }

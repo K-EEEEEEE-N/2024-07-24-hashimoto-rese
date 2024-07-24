@@ -1,0 +1,260 @@
+.nav {
+    background-color: #243FFF;
+    border-radius: 9px;
+    margin: 20px 20px 10px 100px;
+}
+
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+    display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    /* 重なり順を一番上にする */
+    cursor: pointer;
+    background-color: #243FFF;
+    border-radius: 9px;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 9px;
+    background: white;
+    transition: 0.5s;
+    position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+    bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+    top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked~.drawer_open span {
+    background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked~.drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#drawer_input:checked~.drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+/* メニューのデザイン*/
+.nav_content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    /* メニューを画面の外に飛ばす */
+    z-index: 99;
+    background: #fff;
+    transition: .5s;
+    background-color: #EAEAEA;
+    color: #243FFF;
+    font-size: 30px;
+}
+
+/* メニュー黒ポチを消す */
+.nav_list {
+    list-style: none;
+    text-align: center;
+    padding-top: 20%;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked~.nav_content {
+    left: 0;
+    /* メニューを画面に入れる */
+}
+
+.nav_item a {
+    text-decoration: none;
+    color: #243FFF;
+}
+
+.nav_item button {
+    border: none;
+    background-color: #EAEAEA;
+    color: #243FFF;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.mypage h1 {
+    text-align: center;
+}
+
+.mypage__content {
+    display: flex;
+    padding-left: 100px;
+}
+
+.reservation-item {
+    background-color: #243FFF;
+    width: 25rem;
+    border-radius: 6px;
+    box-shadow: 3px 3px 3px black;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+}
+
+.reservation-item__flex p {
+    color: white;
+}
+
+.reservation-item__flex__name {
+    display: flex;
+}
+
+.reservation-item__name {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: absolute;
+    left: 150px;
+}
+
+.reservation-item__flex label {
+    color: white;
+}
+
+.reservation-item__flex input {
+    color: white;
+    background-color: #243FFF;
+    position: absolute;
+    left: 150px;
+    cursor: pointer;
+}
+
+.reservation-item__flex select {
+    color: white;
+    background-color: #243FFF;
+    position: absolute;
+    left: 150px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-top: 10px;
+}
+
+.reservations__update__button {
+    background-color: #0011FE;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 3px 3px 3px black;
+    margin-top: 10px;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+}
+
+.reservations__delete__button {
+    margin-top: 15px;
+    background-color: rgba(0, 0, 0, 0);
+    border: white solid 2px;
+    font-size: medium;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.favorite-shops {
+    padding-left: 3rem;
+}
+
+.shop__content {
+    width: 45rem;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.shop__content__item {
+    width: calc(80%/2);
+    margin-right: 2rem;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 3px 3px 3px black;
+    margin-bottom: 20px;
+}
+
+.shop__content__image img {
+    width: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.shop__content__profile {
+    background-color: white;
+    padding: 10px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.shop__content__profile__name {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.shop__content__profile__tag {
+    margin-bottom: 10px;
+}
+
+.shop__content__profile__tag__area {
+    font-size: small;
+}
+
+.shop__content__profile__tag__genre {
+    font-size: small;
+}
+
+.shop__content__profile__more {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shop__content__profile__more__a {
+    text-decoration: none;
+    background-color: #243FFF;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.favorite-button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    padding-top: 5px;
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+}
